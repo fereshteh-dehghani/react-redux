@@ -1,10 +1,13 @@
-import {useSelector} from 'react-redux'
+import {useState} from 'react'
+import Login from './components/Login';
 function App() {
-  const counter = useSelector((state) => state.counter);
+  const [user , setUser] = useState(null);
   return (
     <div className="App">
-   <h1>Counter App:</h1>
-   <h2>{counter}</h2>
+   <Login user={user}/>
+   {/* <Header user={user}/>
+   <Feed user={user}/> */}
+
     </div>
   );
 }
